@@ -13,6 +13,7 @@ import gd.seminar10.*;
 
 import javax.swing.*;
 import java.awt.*;
+import java.util.Arrays;
 
 public class Frame extends JFrame {
 
@@ -39,6 +40,7 @@ public class Frame extends JFrame {
     }
 
     JPanel buttonsPanel = new JPanel();
+
     void setButtons() {
         buttonsPanel.setPreferredSize(new Dimension(Dimensions.WIDTH, 50));
         MyButton[] myButtons = {
@@ -57,8 +59,20 @@ public class Frame extends JFrame {
                 new MyButton("S6P3", e -> swapPanels(new S6P3())),
                 new MyButton("S7P1", e -> swapPanels(new S7P1())),
                 new MyButton("S8P1", e -> swapPanels(new S8P1())),
-                new MyButton("S9P1", e -> swapPanels(new S9P1())),
+                new MyButton("S9P1", e -> swapPanels(new S9P1()))
         };
+
+        Arrays.stream(myButtons).forEach(
+                button -> button.addActionListener(
+                        n -> {
+                            Arrays.stream(myButtons).forEach(b -> {
+                                if (Color.BLUE.equals(b.getForeground()))
+                                    b.setForeground(Color.YELLOW);
+                            });
+                            button.setForeground(Color.BLUE);
+                        }
+                )
+        );
 
         for (MyButton m : myButtons)
             buttonsPanel.add(m);
