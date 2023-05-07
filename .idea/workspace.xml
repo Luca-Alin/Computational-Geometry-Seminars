@@ -5,12 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9a71bbae-598a-425b-b49e-2e291cbdc432" name="Changes" comment="Update">
-      <change afterPath="$PROJECT_DIR$/src/test/java/gd/seminar2/S2P2Test.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/gd/frame/Frame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gd/frame/Frame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/gd/seminar2/S2P1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gd/seminar2/S2P1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/gd/seminar2/S2P2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gd/seminar2/S2P2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gd/seminar2/S2P3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gd/seminar2/S2P3.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gd/seminar4/S4P1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gd/seminar4/S4P1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gd/seminar5/S5P1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gd/seminar5/S5P1.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,24 +34,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "/home/computer88/Documents/Java/TemeGC/src/main/java/gd",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "settings.editor.selected.configurable": "reference.settings.project.maven.importing",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/computer88/Documents/Java/TemeGC/src/main/java/gd&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/java/gd" />
@@ -136,7 +134,12 @@
       <workItem from="1683237988575" duration="16000" />
       <workItem from="1683238018603" duration="7274000" />
       <workItem from="1683285564563" duration="12036000" />
-      <workItem from="1683303490304" duration="6515000" />
+      <workItem from="1683303490304" duration="9121000" />
+      <workItem from="1683398546625" duration="1141000" />
+      <workItem from="1683407221309" duration="2888000" />
+      <workItem from="1683481807818" duration="1104000" />
+      <workItem from="1683486830681" duration="149000" />
+      <workItem from="1683496121872" duration="3016000" />
     </task>
     <task id="LOCAL-00001" summary="Update">
       <created>1683303768769</created>
@@ -145,7 +148,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683303768769</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Update">
+      <created>1683313584847</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1683313584847</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
