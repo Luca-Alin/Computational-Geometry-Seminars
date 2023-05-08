@@ -10,10 +10,10 @@ import java.util.List;
 public class S3P1 extends DefaultPanel {
 
 
-    int n = 10;
+    int n = 8;
 
-    List<Segment> list = new ArrayList<>();
-    List<Segment> minSumSegments;
+    List<Point> list = new ArrayList<>();
+    List<Point> minSumSegments;
     int minSum = Integer.MAX_VALUE;
     Random random = new Random();
 
@@ -21,15 +21,15 @@ public class S3P1 extends DefaultPanel {
         super();
 
         for (int i = 0; i < n; i++) {
-            int x1 = random.nextInt(40, Dimensions.WIDTH - 40);
-            int y1 = random.nextInt(40, Dimensions.HEIGHT - 40);
-            int x2 = random.nextInt(40, Dimensions.WIDTH - 40);
-            int y2 = random.nextInt(40, Dimensions.HEIGHT - 40);
+            int x = random.nextInt(40, Dimensions.WIDTH - 40);
+            int y = random.nextInt(40, Dimensions.HEIGHT - 40);
 
-            list.add(new Segment(new Point(x1, y1), new Point(x2, y2)));
+            list.add(new Point(x, y));
         }
 
-        heapPermutation(list, list.size(), list.size());
+        heapPermutation(list, list.size());
+
+        System.out.println(segmentsSum(minSumSegments));
     }
 
 
@@ -39,9 +39,19 @@ public class S3P1 extends DefaultPanel {
         Graphics2D g = (Graphics2D) graphics;
 
         g.setStroke(new BasicStroke(4));
+
+
         g.setColor(Color.BLUE);
-        for (Segment s: minSumSegments) {
-            g.drawLine(s.p1.x, s.p1.y, s.p2.x, s.p2.y);
+        for (int i = 0; i < minSumSegments.size(); i += 2) {
+            Point p1 = minSumSegments.get(i);
+            Point p2 = minSumSegments.get(i + 1);
+            g.drawLine(p1.x, p1.y, p2.x, p2.y);
+        }
+
+        g.setColor(Color.RED);
+        for (int i = 0; i < minSumSegments.size(); i++) {
+            Point p = minSumSegments.get(i);
+            g.fillOval(p.x - 6, p.y - 6, 12, 12);
         }
     }
 
@@ -60,22 +70,25 @@ public class S3P1 extends DefaultPanel {
         }
     }
 
-    void heapPermutation(List<Segment> a, int size, int n) {
+    void heapPermutation(List<Point> a, int size) {
         if (size == 1) {
             int kappa = segmentsSum(a);
             if (kappa < minSum)
+            {
                 minSumSegments = new ArrayList<>(a);
+                System.out.println(kappa + " " + a);
+            }
         }
 
         for (int i = 0; i < size; i++) {
-            heapPermutation(a, size - 1, n);
+            heapPermutation(a, size - 1);
 
             if (size % 2 == 1) {
-                Segment temp = a.get(0);
+                Point temp = a.get(0);
                 a.set(0, a.get(size - 1));
                 a.set(size - 1, temp);
             } else {
-                Segment temp = a.get(i);
+                Point temp = a.get(i);
                 a.set(i, a.get(size - 1));
                 a.set(size - 1, temp);
             }
@@ -86,11 +99,12 @@ public class S3P1 extends DefaultPanel {
         return (int) Math.sqrt(Math.pow(p1.x - p2.x, 2) + Math.pow(p1.y - p2.y, 2));
     }
 
-    int segmentsSum(List<Segment> segmentList) {
+    int segmentsSum(List<Point> segmentList) {
         int sum = 0;
-        for (int i = 0; i < segmentList.size(); i++) {
-            Segment sg = segmentList.get(i);
-            sum += distance(sg.p1, sg.p2);
+        for (int i = 0; i < segmentList.size(); i +=2 ) {
+            Point p1 = segmentList.get(i);
+            Point p2 = segmentList.get(i + 1);
+            sum += distance(p1, p2);
         }
         return sum;
     }

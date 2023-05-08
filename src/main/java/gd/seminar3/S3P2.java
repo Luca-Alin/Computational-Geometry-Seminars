@@ -5,13 +5,33 @@ import gd.frame.Dimensions;
 
 import java.awt.*;
 import java.util.*;
-import java.util.List;
 
 public class S3P2 extends DefaultPanel {
+    @Override
+    public void paint(Graphics graphics) {
+        super.paint(graphics);
+        Graphics2D g = (Graphics2D) graphics;
+
+        g.setStroke(new BasicStroke(4));
+        g.setColor(Color.BLACK);
+
+        for (int i = 0; i < segmentList.size(); i++) {
+            Segment s = segmentList.get(i);
+            g.drawLine((int) s.p1.x, (int) s.p1.y, (int) s.p2.x, (int) s.p2.y);
+        }
+
+        g.setColor(Color.RED);
+        for (int i = 0; i < instersectingPoints.size(); i++) {
+            Point p = instersectingPoints.get(i);
+            g.fillOval((int) p.x, (int) p.y, 6, 6);
+        }
+
+    }
 
     int n = 20;
     ArrayList<Segment> segmentList = new ArrayList<>();
     ArrayList<Point> instersectingPoints = new ArrayList<>();
+
     Random random = new Random();
 
     public S3P2() {
@@ -31,60 +51,39 @@ public class S3P2 extends DefaultPanel {
         instersectingPoints = bentleyOttmann.get_intersections();
     }
 
-    @Override
-    public void paint(Graphics graphics) {
-        super.paint(graphics);
-        Graphics2D g = (Graphics2D) graphics;
-
-        g.setStroke(new BasicStroke(4));
-        g.setColor(Color.BLACK);
-
-        for (int i = 0; i < segmentList.size(); i++) {
-            Segment s = segmentList.get(i);
-            g.drawLine((int) s.p_1.x_coord, (int) s.p_1.y_coord, (int) s.p_2.x_coord, (int) s.p_2.y_coord);
-        }
-
-        g.setColor(Color.RED);
-        for (int i = 0; i < instersectingPoints.size(); i++) {
-            Point p = instersectingPoints.get(i);
-            g.fillOval((int) p.get_x_coord(), (int) p.get_y_coord(), 6, 6);
-        }
-
-    }
-
     public class Segment {
 
-        private Point p_1;
-        private Point p_2;
+        private Point p1;
+        private Point p2;
         double value;
 
-        Segment(Point p_1, Point p_2) {
-            this.p_1 = p_1;
-            this.p_2 = p_2;
-            this.calculate_value(this.first().get_x_coord());
+        Segment(Point p1, Point p2) {
+            this.p1 = p1;
+            this.p2 = p2;
+            this.calculate_value(this.first().x);
         }
 
         public Point first() {
-            if (p_1.get_x_coord() <= p_2.get_x_coord()) {
-                return p_1;
+            if (p1.x <= p2.x) {
+                return p1;
             } else {
-                return p_2;
+                return p2;
             }
         }
 
         public Point second() {
-            if (p_1.get_x_coord() <= p_2.get_x_coord()) {
-                return p_2;
+            if (p1.x <= p2.x) {
+                return p2;
             } else {
-                return p_1;
+                return p1;
             }
         }
 
         public void calculate_value(double value) {
-            double x1 = this.first().get_x_coord();
-            double x2 = this.second().get_x_coord();
-            double y1 = this.first().get_y_coord();
-            double y2 = this.second().get_y_coord();
+            double x1 = this.first().x;
+            double x2 = this.second().x;
+            double y1 = this.first().y;
+            double y2 = this.second().y;
             this.value = y1 + (((y2 - y1) / (x2 - x1)) * (value - x1));
         }
 
@@ -100,30 +99,13 @@ public class S3P2 extends DefaultPanel {
 
     public class Point {
 
-        private double x_coord;
-        private double y_coord;
+        public double x;
+        public double y;
 
         Point(double x, double y) {
-            this.x_coord = x;
-            this.y_coord = y;
+            this.x = x;
+            this.y = y;
         }
-
-        public double get_x_coord() {
-            return this.x_coord;
-        }
-
-        public void set_x_coord(double x_coord) {
-            this.x_coord = x_coord;
-        }
-
-        public double get_y_coord() {
-            return this.y_coord;
-        }
-
-        public void set_y_coord(double y_coord) {
-            this.y_coord = y_coord;
-        }
-
     }
 
     public class Event {
@@ -136,14 +118,14 @@ public class S3P2 extends DefaultPanel {
         Event(Point p, Segment s, int type) {
             this.point = p;
             this.segments = new ArrayList<>(Arrays.asList(s));
-            this.value = p.get_x_coord();
+            this.value = p.x;
             this.type = type;
         }
 
         Event(Point p, ArrayList<Segment> s, int type) {
             this.point = p;
             this.segments = s;
-            this.value = p.get_x_coord();
+            this.value = p.x;
             this.type = type;
         }
 
@@ -265,14 +247,14 @@ public class S3P2 extends DefaultPanel {
         }
 
         private boolean report_intersection(Segment s_1, Segment s_2, double L) {
-            double x1 = s_1.first().get_x_coord();
-            double y1 = s_1.first().get_y_coord();
-            double x2 = s_1.second().get_x_coord();
-            double y2 = s_1.second().get_y_coord();
-            double x3 = s_2.first().get_x_coord();
-            double y3 = s_2.first().get_y_coord();
-            double x4 = s_2.second().get_x_coord();
-            double y4 = s_2.second().get_y_coord();
+            double x1 = s_1.first().x;
+            double y1 = s_1.first().y;
+            double x2 = s_1.second().x;
+            double y2 = s_1.second().y;
+            double x3 = s_2.first().x;
+            double y3 = s_2.first().y;
+            double x4 = s_2.second().x;
+            double y4 = s_2.second().y;
             double r = (x2 - x1) * (y4 - y3) - (y2 - y1) * (x4 - x3);
             if (r != 0) {
                 double t = ((x3 - x1) * (y4 - y3) - (y3 - y1) * (x4 - x3)) / r;
@@ -320,12 +302,12 @@ public class S3P2 extends DefaultPanel {
 
         public void print_intersections() {
             for (Point p : this.X) {
-                System.out.println("(" + p.get_x_coord() + ", " + p.get_y_coord() + ")");
+                System.out.println("(" + p.x + ", " + p.y + ")");
             }
         }
 
         public ArrayList<Point> get_intersections() {
-            X.forEach(n -> System.out.println(n.get_x_coord() + " " + n.get_y_coord()));
+            X.forEach(n -> System.out.println(n.x + " " + n.y));
             return this.X;
         }
 
