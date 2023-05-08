@@ -31,11 +31,13 @@ public class S5P1 extends DefaultPanel {
         new ConvexHull().convexHull(points, points.length);
 
 
-        timer = new javax.swing.Timer(100, actionEvent -> {
+        timer = new javax.swing.Timer(40, actionEvent -> {
             if (count1 < points.length)
                 count1++;
-            else if (count2 < convexHullList.size() - 1)
+            else if (count2 < convexHullList.size() - 1) {
+                timer.setDelay(125);
                 count2++;
+            }
             else if (count3 == 0)
                 count3++;
             else
