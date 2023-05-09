@@ -6,9 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="9a71bbae-598a-425b-b49e-2e291cbdc432" name="Changes" comment="Update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/gd/seminar3/S3P1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gd/seminar3/S3P1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gd/frame/DefaultPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gd/frame/DefaultPanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/gd/seminar3/S3P2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gd/seminar3/S3P2.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/gd/seminar6/S6P1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gd/seminar6/S6P1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gd/seminar6/S6P2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gd/seminar6/S6P2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gd/seminar6/S6P3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gd/seminar6/S6P3.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gd/seminar7/S7P1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gd/seminar7/S7P1.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,7 +46,7 @@
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/computer88/Documents/Java/TemeGC/src/main/java/gd&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/computer88/Documents/Java/TemeGC/src/main/java/gd/seminar6&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -54,6 +57,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/gd/seminar6" />
       <recent name="$PROJECT_DIR$/src/main/java/gd" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
@@ -144,7 +148,10 @@
       <workItem from="1683502451850" duration="1682000" />
       <workItem from="1683507278746" duration="3521000" />
       <workItem from="1683512001144" duration="2203000" />
-      <workItem from="1683558592325" duration="4212000" />
+      <workItem from="1683558592325" duration="13460000" />
+      <workItem from="1683575304297" duration="2910000" />
+      <workItem from="1683582212785" duration="5827000" />
+      <workItem from="1683588770185" duration="2989000" />
     </task>
     <task id="LOCAL-00001" summary="Update">
       <created>1683303768769</created>
@@ -181,7 +188,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683554243327</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Update">
+      <created>1683563404829</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1683563404829</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

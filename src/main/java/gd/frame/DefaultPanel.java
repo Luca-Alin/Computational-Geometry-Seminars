@@ -16,7 +16,12 @@ public class DefaultPanel extends JPanel {
     int unit = Dimensions.HEIGHT / 25;
     @Override
     public void paint(Graphics graphics) {
+        super.paint(graphics);
         Graphics2D g = (Graphics2D) graphics;
+        g.setRenderingHint (
+                RenderingHints.KEY_ANTIALIASING,
+                RenderingHints.VALUE_ANTIALIAS_ON
+        );
 
         g.setColor(Color.LIGHT_GRAY);
         g.setStroke(new BasicStroke(1));

@@ -3,45 +3,28 @@ package gd.seminar3;
 import gd.frame.DefaultPanel;
 import gd.frame.Dimensions;
 
+import javax.swing.Timer;
 import java.awt.*;
+import java.util.Queue;
 import java.util.*;
 
 public class S3P2 extends DefaultPanel {
-    @Override
-    public void paint(Graphics graphics) {
-        super.paint(graphics);
-        Graphics2D g = (Graphics2D) graphics;
+    int n = 15;
 
-        g.setStroke(new BasicStroke(4));
-        g.setColor(Color.BLACK);
-
-        for (int i = 0; i < segmentList.size(); i++) {
-            Segment s = segmentList.get(i);
-            g.drawLine((int) s.p1.x, (int) s.p1.y, (int) s.p2.x, (int) s.p2.y);
-        }
-
-        g.setColor(Color.RED);
-        for (int i = 0; i < instersectingPoints.size(); i++) {
-            Point p = instersectingPoints.get(i);
-            g.fillOval((int) p.x, (int) p.y, 6, 6);
-        }
-
-    }
-
-    int n = 20;
     ArrayList<Segment> segmentList = new ArrayList<>();
-    ArrayList<Point> instersectingPoints = new ArrayList<>();
-
+    ArrayList<Point> instersectingPoints;
     Random random = new Random();
 
+    int count = 0;
+    Timer timer;
     public S3P2() {
         super();
 
         for (int i = 0; i < n; i++) {
-            Point p1 = new Point(random.nextDouble(40, Dimensions.WIDTH - 40),
-                    random.nextDouble(40, Dimensions.HEIGHT - 40));
-            Point p2 = new Point(random.nextDouble(40, Dimensions.WIDTH - 40),
-                    random.nextDouble(40, Dimensions.HEIGHT - 40));
+            Point p1 = new Point(random.nextDouble(0, Dimensions.WIDTH),
+                    random.nextDouble(0, Dimensions.HEIGHT));
+            Point p2 = new Point(random.nextDouble(0, Dimensions.WIDTH),
+                    random.nextDouble(0, Dimensions.HEIGHT));
 
             segmentList.add(new Segment(p1, p2));
         }
@@ -49,7 +32,63 @@ public class S3P2 extends DefaultPanel {
         BentleyOttmann bentleyOttmann = new BentleyOttmann(segmentList);
         bentleyOttmann.find_intersections();
         instersectingPoints = bentleyOttmann.get_intersections();
+
+
+
+
+
+        instersectingPoints.sort((p1, p2) -> {
+            if (p1.x > p2.x)
+                return 1;
+            else if (p1.x < p2.x)
+                return -1;
+            return 0;
+        });
+
+
+        timer = new Timer(15, actionEvent -> {
+            if (count < Dimensions.WIDTH) {
+                count+=12;
+            } else {
+                timer.stop();
+            }
+            this.removeAll();
+            this.repaint();
+        });
+        timer.start();
     }
+    @Override
+    public void paint(Graphics graphics) {
+        super.paint(graphics);
+        Graphics2D g = (Graphics2D) graphics;
+
+        g.setStroke(new BasicStroke(4));
+
+        for (int i = 0; i < segmentList.size(); i++) {
+            if (i % 2 == 0)
+                g.setColor(new Color(50, 50, 150));
+            else if (i % 3 == 0)
+                g.setColor(new Color(100, 100, 200));
+            else
+                g.setColor(new Color(150, 150, 250));
+            Segment s = segmentList.get(i);
+            g.drawLine((int) s.p1.x, (int) s.p1.y, (int) s.p2.x, (int) s.p2.y);
+        }
+
+        g.setColor(Color.RED);
+        for (int i = 0; i < instersectingPoints.size(); i++) {
+            Point p = instersectingPoints.get(i);
+            if (p.x < count) {
+                g.fillOval((int) p.x - 4, (int) p.y - 4, 10, 10);
+            }
+        }
+
+        g.setStroke(new BasicStroke(8));
+        g.setColor(new Color(0f,0f,0f,.5f ));
+        g.drawLine(count, 0, count, Dimensions.HEIGHT);
+
+    }
+
 
     public class Segment {
 
@@ -307,7 +346,7 @@ public class S3P2 extends DefaultPanel {
         }
 
         public ArrayList<Point> get_intersections() {
-            X.forEach(n -> System.out.println(n.x + " " + n.y));
+            //X.forEach(n -> System.out.println(n.x + " " + n.y));
             return this.X;
         }
 
