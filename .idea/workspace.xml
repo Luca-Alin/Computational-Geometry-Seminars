@@ -6,12 +6,29 @@
   <component name="ChangeListManager">
     <list default="true" id="9a71bbae-598a-425b-b49e-2e291cbdc432" name="Changes" comment="Update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/gd/frame/DefaultPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gd/frame/DefaultPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/gd/seminar3/S3P2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gd/seminar3/S3P2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/gd/seminar6/S6P1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gd/seminar6/S6P1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/gd/seminar6/S6P2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gd/seminar6/S6P2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/gd/seminar6/S6P3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gd/seminar6/S6P3.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/gd/seminar7/S7P1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gd/seminar7/S7P1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gd/frame/DefaultPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gc/frame/DefaultPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gd/frame/Dimensions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gc/frame/Dimensions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gd/frame/Frame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gc/frame/Frame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gd/frame/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gc/frame/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gd/frame/MyButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gc/frame/GCButton.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gd/seminar1/S1P1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gc/seminar1/S1P1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gd/seminar1/S1P2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gc/seminar1/S1P2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gd/seminar1/S1P3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gc/seminar1/S1P3.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gd/seminar10/S101.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gc/seminar10/S101.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gd/seminar2/S2P1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gc/seminar2/S2P1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gd/seminar2/S2P2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gc/seminar2/S2P2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gd/seminar2/S2P3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gc/seminar2/S2P3.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gd/seminar3/S3P1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gc/seminar3/S3P1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gd/seminar3/S3P2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gc/seminar3/S3P2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gd/seminar4/S4P1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gc/seminar4/S4P1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gd/seminar5/S5P1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gc/seminar5/S5P1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gd/seminar6/S6P1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gc/seminar6/S6P1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gd/seminar6/S6P2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gc/seminar6/S6P2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gd/seminar6/S6P3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gc/seminar6/S6P3.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gd/seminar7/S7P1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gc/seminar7/S7P1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gd/seminar8/S8P1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gc/seminar8/S8P1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gd/seminar9/S9P1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gc/seminar9/S9P1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/gd/seminar2/S2P2Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/gc/seminar2/S2P2Test.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,6 +40,7 @@
       <list>
         <option value="Class" />
         <option value="JUnit5 Test Class" />
+        <option value="Dockerfile" />
       </list>
     </option>
   </component>
@@ -51,7 +69,7 @@
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.intentionPowerPack&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -74,7 +92,7 @@
       <recent name="gd.seminar9" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.gd.frame.Main">
+  <component name="RunManager" selected="Application.gc.frame.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="untitled.Main" />
       <module name="TemeGC" />
@@ -88,12 +106,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="gd.frame.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="gd.frame.Main" />
+    <configuration name="gc.frame.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="gc.frame.Main" />
       <module name="TemeGC" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="gd.frame.*" />
+          <option name="PATTERN" value="gc.frame.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -105,12 +123,12 @@
       <module name="TemeGC" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="gd.seminar2.*" />
+          <option name="PATTERN" value="gc.seminar2.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="gd.seminar2" />
-      <option name="MAIN_CLASS_NAME" value="gd.seminar2.S2P2Test" />
+      <option name="MAIN_CLASS_NAME" value="gc.seminar2.S2P2Test" />
       <option name="METHOD_NAME" value="triangleArea" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
@@ -119,7 +137,7 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.gd.frame.Main" />
+        <item itemvalue="Application.gc.frame.Main" />
         <item itemvalue="JUnit.S2P2Test.triangleArea" />
         <item itemvalue="Application.Main" />
       </list>
@@ -151,7 +169,20 @@
       <workItem from="1683558592325" duration="13460000" />
       <workItem from="1683575304297" duration="2910000" />
       <workItem from="1683582212785" duration="5827000" />
-      <workItem from="1683588770185" duration="2989000" />
+      <workItem from="1683588770185" duration="3992000" />
+      <workItem from="1683633240177" duration="2928000" />
+      <workItem from="1683696536486" duration="150000" />
+      <workItem from="1683704544441" duration="65000" />
+      <workItem from="1683736544932" duration="3100000" />
+      <workItem from="1683789380199" duration="1490000" />
+      <workItem from="1683790880364" duration="21000" />
+      <workItem from="1683801028599" duration="1126000" />
+      <workItem from="1683871013685" duration="29000" />
+      <workItem from="1684127780774" duration="2280000" />
+      <workItem from="1684130553340" duration="1698000" />
+      <workItem from="1684134607410" duration="1038000" />
+      <workItem from="1684142205908" duration="11000" />
+      <workItem from="1684331465698" duration="15000" />
     </task>
     <task id="LOCAL-00001" summary="Update">
       <created>1683303768769</created>
@@ -195,14 +226,36 @@
       <option name="project" value="LOCAL" />
       <updated>1683563404829</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Update">
+      <created>1683592343063</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1683592343063</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Update" />
     <option name="LAST_COMMIT_MESSAGE" value="Update" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
